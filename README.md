@@ -49,6 +49,13 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
     }
 ```
+## If you want to use your own API endpoint
+Sure that can work too, however you would need to make changes to the classes that implement the ExchangeRateAPI protocol i.e. have a look at the APIDotExRate file and notice the class variable
+```
+let EXTERNAL_API_URL: String = "https:...." 
+```
+Over there replace the string with your API. Note, if you use your own url, you may need to change how the fetchExchangeRates methods process the JSON data.
+
 If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks
 # While you are here
 Maybe checkout some of the [apps] that I have built at [My Day To-Do] or have a read of my [blog].
