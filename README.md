@@ -53,7 +53,7 @@ If you found this repository useful and feel you can improve it? Then please for
 # While you are here
 Maybe checkout some of the [apps] that I have built at [My Day To-Do] or have a read of my [blog].
 
-[apps]:(https://mydaytodo.com/apps/)
-[My Day To-Do]: (https://mydaytodo.com/)
-[blog]: (https://mydaytoco.com/blog)
+[apps]: https://mydaytodo.com/apps/
+[My Day To-Do]: https://mydaytodo.com/
+[blog]: https://mydaytoco.com/blog
 [![N|Solid](https://mydaytodo.com/wp-content/uploads/2018/08/MDTicon-1-150x150.png)](https://mydaytodo.com/)
