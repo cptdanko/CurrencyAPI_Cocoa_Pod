@@ -42,7 +42,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
            }
            if let cur = currencies {
                self.currenciesPickerData = cur
-               self.lastUpdateDate = date
                self.reloadPickerView()
                self.lastUpdateDate = dateLastUpdated
            }
