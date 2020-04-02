@@ -55,10 +55,13 @@ let EXTERNAL_API_URL: String = "https:...."
 ```
 Over there replace the string with your API. Note, if you use your own url, you may need to change how the fetchExchangeRates methods process the JSON data.
 
-If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks
+If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks!
+I have also written a blogpost about how and why I built this repository, you can look at that [on medium].
+
 # While you are here
 Maybe checkout some of the [apps] that I have built at [My Day To-Do] or have a read of my [blog].
 
+[on medium]: https://medium.com/@bhuman.soni/open-source-currencyapi-cocoapod-on-github-9734f068b650
 [apps]: https://mydaytodo.com/apps/
 [My Day To-Do]: https://mydaytodo.com/
 [blog]: https://mydaytoco.com/blog
