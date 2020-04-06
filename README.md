@@ -42,18 +42,27 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
            }
            if let cur = currencies {
                self.currenciesPickerData = cur
-               self.lastUpdateDate = date
                self.reloadPickerView()
                self.lastUpdateDate = dateLastUpdated
            }
         }
     }
 ```
-If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks
+## If you want to use your own API endpoint
+Sure that can work too, however you would need to make changes to the classes that implement the ExchangeRateAPI protocol i.e. have a look at the APIDotExRate file and notice the class variable
+```
+let EXTERNAL_API_URL: String = "https:...." 
+```
+Over there replace the string with your API. Note, if you use your own url, you may need to change how the fetchExchangeRates methods process the JSON data.
+
+If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks!
+I have also written a blogpost about how and why I built this repository, you can look at that [on medium].
+
 # While you are here
 Maybe checkout some of the [apps] that I have built at [My Day To-Do] or have a read of my [blog].
 
-[apps]:(https://mydaytodo.com/apps/)
-[My Day To-Do]: (https://mydaytodo.com/)
-[blog]: (https://mydaytoco.com/blog)
+[on medium]: https://medium.com/@bhuman.soni/open-source-currencyapi-cocoapod-on-github-9734f068b650
+[apps]: https://mydaytodo.com/apps/
+[My Day To-Do]: https://mydaytodo.com/
+[blog]: https://mydaytoco.com/blog
 [![N|Solid](https://mydaytodo.com/wp-content/uploads/2018/08/MDTicon-1-150x150.png)](https://mydaytodo.com/)
