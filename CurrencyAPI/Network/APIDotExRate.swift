@@ -8,6 +8,13 @@
 
 import Foundation
 
+/*
+ This class queries the free version of the api from ExchangeRate-api Endpoint.
+ Info: This data is not the most reliable and updates only once every 24 hours
+ in Sydney, it would update ever day at 11:04am or 10:04 am depending on
+ daylight savings. The goal of this pod is simply to show some sample usage
+ of the ExchangeRateAPI protocol
+ */
 public class APIDotExRate: ExchangeRateAPI {
 
     let EXTERNAL_API_URL: String = "https://api.exchangerate-api.com/v4/latest/"

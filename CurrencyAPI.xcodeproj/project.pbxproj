@@ -58,16 +58,48 @@
 		C6314DDF242CC2580068A8DB /* CurrencyAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C63DEC64243B3E6400C4E8F4 /* Network */,
+				C63DEC63243B3E5700C4E8F4 /* Protocols */,
+				C63DEC62243B3E2900C4E8F4 /* Models */,
+				C63DEC61243B3E1600C4E8F4 /* Helpers */,
 				C6314DE0242CC2580068A8DB /* CurrencyAPI.h */,
+				C6314DE1242CC2580068A8DB /* Info.plist */,
+			);
+			path = CurrencyAPI;
+			sourceTree = "<group>";
+		};
+		C63DEC61243B3E1600C4E8F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C6F564A9242CC49200F82EDC /* DBHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C63DEC62243B3E2900C4E8F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6EA2E02242CD61B005C8A6A /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C63DEC63243B3E5700C4E8F4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C6F564AA242CC49300F82EDC /* ExchangeRateAPI.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C63DEC64243B3E6400C4E8F4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				C6F564AB242CC49300F82EDC /* APIDotExRate.swift */,
 				C6F564A7242CC49200F82EDC /* APIFactory.swift */,
 				C6F564A8242CC49200F82EDC /* Bank1.swift */,
-				C6F564A9242CC49200F82EDC /* DBHelper.swift */,
-				C6F564AA242CC49300F82EDC /* ExchangeRateAPI.swift */,
-				C6314DE1242CC2580068A8DB /* Info.plist */,
-				C6EA2E02242CD61B005C8A6A /* Currency.swift */,
 			);
-			path = CurrencyAPI;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
