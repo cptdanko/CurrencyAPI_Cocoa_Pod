@@ -13,7 +13,11 @@ import Foundation
  all conform to this
  */
 public protocol ExchangeRateAPI {
+    
     /* baseCur = Base Currency e.g. AUD, GBP etc */
     func fetchExchangeRates(baseCur: String, successHandler: @escaping (_ exRates: [Currency]?, _ err: Error?, _ lastUpdateDate: Date?) -> Void)
+    
     func getExchangeRate(baseCur: String, code: String, successHandler:  @escaping (_ currency: Currency?, _ err: Error?, _ lastUpdateDate: Date?) -> Void)
+    
+    func fetchAllExRateData(baseCur: String, successHandler: @escaping (_ exRateData: ExchangeRateData?, _ err: Error?) -> Void)
 }

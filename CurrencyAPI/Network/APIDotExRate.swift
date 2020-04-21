@@ -4,20 +4,51 @@
 //
 //  Created by Bhuman Soni on 21/3/20.
 //  Copyright © 2020 Bhuman Soni. All rights reserved.
-//
 
 import Foundation
 
-/*
- This class queries the free version of the api from ExchangeRate-api Endpoint.
+/* This class queries the free version of the api from ExchangeRate-api Endpoint.
  Info: This data is not the most reliable and updates only once every 24 hours
  in Sydney, it would update ever day at 11:04am or 10:04 am depending on
  daylight savings. The goal of this pod is simply to show some sample usage
- of the ExchangeRateAPI protocol
- */
+ of the ExchangeRateAPI protocol. */
 public class APIDotExRate: ExchangeRateAPI {
-
+    
     let EXTERNAL_API_URL: String = "https://api.exchangerate-api.com/v4/latest/"
+    
+    /*
+    This method just migrates the app the parsing to the Swift 4 parsing format. I was someone one created a pull request and added this method, since it didn't happen, I did it myself.
+     */
+    public func fetchAllExRateData(baseCur: String, successHandler: @escaping (ExchangeRateData?, Error?) -> Void) {
+        
+        let urlStr = "\(EXTERNAL_API_URL)\(baseCur)"
+        let url = URL(string: urlStr)!
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (networkData, response, error) in
+            guard error == nil else {
+                successHandler(nil, nil)
+                return
+            }
+            guard let d = networkData else {
+                successHandler(nil, nil)
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let exRateData = try decoder.decode(ExchangeRateData.self, from: d)
+                successHandler(exRateData, nil)
+            } catch let error{
+                print(error.localizedDescription)
+                successHandler(nil, nil)
+            }
+        }
+        task.resume()
+    }
+    /*
+     This method is still here for compitability reasons i.e. in caes anyone is using
+     this pod in their iOS apps, this method will still work for them and they have
+     the time to migrate their apps.
+     */
     public func fetchExchangeRates(baseCur: String, successHandler: @escaping ([Currency]?, Error?, Date?) -> Void) {
         let urlStr = "\(EXTERNAL_API_URL)\(baseCur)"
         let url = URL(string: urlStr)!
@@ -66,8 +97,7 @@ public class APIDotExRate: ExchangeRateAPI {
         return
     }
     /* added this method to ensure the user always sees the latest exchange rate
-        Haven't added a fallback to resort to stored data
-    */
+        Haven't added a fallback to resort to stored data */
     public func getExchangeRate(baseCur: String, code: String, successHandler: @escaping (_ currency: Currency?, _ err: Error?, _ lastUpdateDate: Date?) -> Void) {
         let urlStr = "\(EXTERNAL_API_URL)\(baseCur)"
         let url = URL(string: urlStr)!

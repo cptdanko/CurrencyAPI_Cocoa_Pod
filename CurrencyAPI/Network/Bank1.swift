@@ -14,8 +14,13 @@ import Foundation
  All that code has been removed for privacy reasons
  */
 public class Bank1: ExchangeRateAPI {
-    //add the url for whichever bank you are getting the data from 
+    //add the url for whichever bank you are getting the data from
     internal var EXTERNAL_API_URL: String = ""
+    
     public func getExchangeRate(baseCur: String, code: String, successHandler: @escaping (Currency?, Error?, Date?) -> Void) {}
     public func fetchExchangeRates(baseCur: String, successHandler: @escaping ([Currency]?, Error?, Date?) -> Void) { }
+    
+    public func fetchAllExRateData(baseCur: String, successHandler: @escaping (ExchangeRateData?, Error?) -> Void) { }
+    
+
 }
