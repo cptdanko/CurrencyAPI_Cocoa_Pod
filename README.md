@@ -58,11 +58,22 @@ Over there replace the string with your API. Note, if you use your own url, you 
 If you found this repository useful and feel you can improve it? Then please fork the repository and create a pull request, I'd be happy to look at it and merge it. Thanks!
 I have also written a blogpost about how and why I built this repository, you can look at that [on medium].
 
-# While you are here
-Maybe checkout some of the [apps] that I have built at [My Day To-Do] or have a read of my [blog].
 
-[on medium]: https://medium.com/@bhuman.soni/open-source-currencyapi-cocoapod-on-github-9734f068b650
-[apps]: https://mydaytodo.com/apps/
-[My Day To-Do]: https://mydaytodo.com/
-[blog]: https://mydaytoco.com/blog
-[![N|Solid](https://mydaytodo.com/wp-content/uploads/2018/08/MDTicon-1-150x150.png)](https://mydaytodo.com/)
+# Any help?
+If you have difficulty understanding anything about this repo, feel free to reach out to me through this Github account or at bhuman at mydaytodoDOTcom or bhumanDOTsoniATgmailDOTcom. 
+
+# More great tutorials and code samples
+I will be writing a detailed tutorial on how to work with this repo on my blog. Until then refer to [my blog] for other tutorials and "how-to" articles with detailed code samples.
+
+If you like what I am doing, you can [buy me a coffee]
+
+Click on the next link for more info on the 13+ year [software engineering career journey] of the author.
+
+[line 16]: https://github.com/cptdanko/nodetypescriptcrudnotes/blob/main/src/db.ts#L16
+[my blog]: https://mydaytodo.com/blog/
+[line 17]: https://github.com/cptdanko/nodetypescriptcrudnotes/blob/main/src/db.ts#L17
+[AWS docs]: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+[blogpost]: https://mydaytodo.com/blog/
+[this blog]: https://mydaytodo.com/blog/
+[buy me a coffee]: https://www.buymeacoffee.com/bhumansoni
+[software engineering career journey]: https://mydaytodo.com/the-3-stages-of-a-software-engineering-career/
